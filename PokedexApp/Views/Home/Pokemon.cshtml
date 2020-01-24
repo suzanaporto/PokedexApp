@@ -1,0 +1,19 @@
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>This is  @Model.name</h2>
+<img src="@Model.sprites.front_default"/>
+<br/>
+<h3>Profile</h3>
+<p> Height: @Model.height</p> 
+<p> Weight: @Model.weight</p> 
+@{
+
+    foreach (var item in @Model.moves)
+    {
+        <p>@item.move.name</p>
+    }
+}
+<p> Base Experience: @Model.base_experience</p>
